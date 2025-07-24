@@ -1,23 +1,88 @@
-<<<<<<< HEAD
-# OnlineShoppingSystem
-A simple Java-based online shopping system that applies key object-oriented design patterns including Adapter, Observer, and Singleton. Demonstrates service modularity, pattern-driven architecture, and maintainable code structure for microservice-style projects.
-=======
-## Getting Started
+# Online Shopping System (Design Patterns Project)
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+This is a simple Java-based online shopping system that demonstrates the use of object-oriented design patterns such as **Adapter**, **Observer**, and **Singleton**. The goal is to show how these patterns help create modular, maintainable, and extensible service-based architecture.
 
-## Folder Structure
+## 🧱 Design Patterns Used
 
-The workspace contains two folders by default, where:
+### 1. Adapter Pattern
+- **Purpose**: To integrate external payment gateways with different APIs into a consistent internal interface.
+- **Used In**: `StripePaymentAdapter` adapts the third-party `StripeAPI` to match our `PaymentService` interface.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+### 2. Observer Pattern
+- **Purpose**: To decouple the core order processing logic from dependent services such as notification and inventory updates.
+- **Used In**: `OrderService` maintains a list of observers and notifies them when an order is placed.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+### 3. Singleton Pattern
+- **Purpose**: To ensure a single, shared logging instance throughout the application.
+- **Used In**: `Logger` class provides a global logging point.
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+## 🗂️ Project Structure
 
-## Dependency Management
+OnlineShoppingSystem/
+│
+├── adapter/
+│ ├── PaymentService.java
+│ ├── StripeAPI.java
+│ └── StripePaymentAdapter.java
+│
+├── observer/
+│ ├── Observer.java
+│ ├── NotificationService.java
+│ └── InventoryService.java
+│
+├── singleton/
+│ └── Logger.java
+│
+├── order/
+│ └── OrderService.java
+│
+└── App.java
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
->>>>>>> dcbfa67 (Initial commit)
+
+## ▶️ How to Run
+
+### Requirements
+- Java 8 or higher
+- A terminal or command line environment
+- VS Code or any Java IDE (optional)
+
+### Steps
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your username/OnlineShoppingSystem.git
+   cd OnlineShoppingSystem/src
+Compile the source files:
+
+javac */*.java App.java
+
+Run the application:
+
+    java App
+
+You should see logs confirming that payment is processed, inventory is updated, and a notification is sent.
+
+
+📸 UML Diagrams
+
+Diagrams for the Adapter, Observer, and Singleton patterns are included in the uml_diagrams/ directory .
+📚 Documentation
+
+For each design pattern used, this project includes:
+
+    A high-level pattern description
+
+    A UML diagram
+
+    Pattern usage within this system
+
+    Source code in Java
+
+👨🏽‍💻 Author
+
+    [Ikechukwu – GitHub Profile](https://github.com/Par-hue/OnlineShoppingSystem/edit/main/README.md)
+
+📄 License
+
+This project is open-source and available under the MIT License.
+
+
