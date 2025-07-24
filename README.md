@@ -79,7 +79,8 @@ For each design pattern used, this project includes:
 
 👨🏽‍💻 Author
 
-    [Ikechukwu – GitHub Profile](https://github.com/Par-hue/OnlineShoppingSystem/edit/main/README.md)
+     ikechukwu I
+    https://github.com/Par-hue
 
 📄 License
 
